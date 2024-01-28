@@ -3,9 +3,11 @@
 // Execute `rustlings hint iterators4` or use the `hint` watch subcommand for a
 // hint.
 
-// I AM NOT DONE
 
 pub fn factorial(num: u64) -> u64 {
+    let res = (1..num+1).into_iter().fold(1,|acc,x| acc * x);
+    println!("{:?}",res);
+    return res
     // Complete this function to return the factorial of num
     // Do not use:
     // - return
@@ -39,4 +41,6 @@ mod tests {
     fn factorial_of_4() {
         assert_eq!(24, factorial(4));
     }
+
+    
 }
